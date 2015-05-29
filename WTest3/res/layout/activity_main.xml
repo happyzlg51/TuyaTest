@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/ff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom" >
+
+        <com.vstar.tuya.view.MyView
+            android:id="@+id/myView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/showIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.vstar.tuya.view.PenSizeView
+            android:id="@+id/penSizeIv"
+            android:layout_width="@dimen/penSizeView_Width"
+            android:layout_height="@dimen/penSizeView_Height"
+            android:background="@drawable/ic_launcher" />
+
+        <SeekBar
+            android:id="@+id/penSizeSb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/bottom2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/openPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打开图片" />
+
+            <Button
+                android:id="@+id/undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="撤销" />
+
+            <Button
+                android:id="@+id/redo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="前进" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清除" />
+
+            <Button
+                android:id="@+id/savePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存" />
+
+            <Button
+                android:id="@+id/pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大小" />
+
+            <Button
+                android:id="@+id/penColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色" />
+
+            <Button
+                android:id="@+id/penStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="样式" />
+
+            <CheckBox
+                android:id="@+id/cb_eraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="橡皮擦"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/minPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小图片" />
+
+            <Button
+                android:id="@+id/selectBg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="背景" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_picConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/btn_picCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="取消" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bgPic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/bgpic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/smallpaper00" />
+
+        <ImageView
+            android:id="@+id/bgpic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/smallpaper01" />
+
+        <ImageView
+            android:id="@+id/bgpic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/smallpaper07" />
+
+        <ImageView
+            android:id="@+id/bgpic4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/smallpaper14" />
+
+        <ImageView
+            android:id="@+id/bgpic5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/smallpaper17" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_minpic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/minpic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stickerthumb05" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sharder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/shader1"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
+
+        <ImageView
+            android:id="@+id/shader2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/stamp0heart" />
+    </LinearLayout>
+
+</RelativeLayout>
